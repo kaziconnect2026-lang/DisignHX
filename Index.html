@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Clothing Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>AI Clothing Editor</h1>
+
+  <!-- Upload -->
+  <input type="file" id="upload" accept="image/*"><br><br>
+
+  <!-- Color Picker -->
+  <label>Pick a color:</label>
+  <input type="color" id="colorPicker"><br><br>
+
+  <!-- Pattern Selector -->
+  <label>Select a pattern:</label>
+  <select id="patternSelect"></select><br><br>
+
+  <!-- Canvas -->
+  <canvas id="canvas" width="400" height="400"></canvas>
+
+  <script src="patterns.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
