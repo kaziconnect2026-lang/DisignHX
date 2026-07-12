@@ -1,0 +1,35 @@
+const patterns = [
+  {
+    name: "none",
+    label: "None",
+    draw: (ctx, canvas) => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    }
+  },
+  {
+    name: "stripes",
+    label: "Stripes",
+    draw: (ctx, canvas) => {
+      ctx.fillStyle = "orange";
+      for (let i = 0; i < canvas.height; i += 20) {
+        ctx.fillRect(0, i, canvas.width, 10);
+      }
+    }
+  },
+  {
+    name: "polka",
+    label: "Polka Dots",
+    draw: (ctx, canvas) => {
+      ctx.fillStyle = "blue";
+      for (let x = 0; x < canvas.width; x += 40) {
+        for (let y = 0; y < canvas.height; y += 40) {
+          ctx.beginPath();
+          ctx.arc(x, y, 10, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+    }
+  }
+  // Add up to 100 patterns here
+];
